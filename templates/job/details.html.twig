@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block title 'Agence Lorem Ipsume' %}
+ {% block body %}
+     <div style="background-color: #D3D3D3">
+         <div class="container center">
+             <div class="jumbotron text-center" >
+
+                   id : {{ job.id }}<br>
+                   Nom: {{ job.name }}<br>
+                   expression: {{ job.expression }}<br>
+                   Etat: {{ job.state }}<br>
+                   Activation: {{ job.actif ==1 ? 'activé':'désactivé' }}<br>
+                   Prochaine date d'exécution: {{ job.nextDateExec.format('Y-m-d H:i:s') }}<br>
+                   Type du job: {{ job.listSousJobs== [] ? 'job cron' : job.listSousJobs[0].command }}<br>
+                   Commande: {{ job.command }}
+
+
+
+
+             </div>
+
+         </div>
+     </div>
+
+
+
+
+
+
+
+ {% endblock %}

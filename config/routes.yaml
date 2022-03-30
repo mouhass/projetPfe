@@ -1,3 +1,30 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /admin/batchjobs
+    controller: App\Controller\jobController::index
+
+logout:
+    path: /logout
+
+Home:
+    path: /
+    controller: App\Controller\handleLogout::exit
+
+details:
+    path: /admin/batchjobs/{id}
+    controller: App\Controller\jobController::details
+
+modifier:
+    path: /admin/batchjobs/modifier/{id}
+    controller: App\Controller\jobController::modifier
+
+createJobCron:
+    path: /admin/batchjobs/create/createJobCron
+    controller: App\Controller\jobController::createJobCron
+
+createJobComposite:
+    path: /admin/batchjobs/create/createJobComposite
+    controller: App\Controller\jobController::createJobComposite
+
+delete:
+    path: /admin/batchjobs/deleteJob/{id}
+    controller: App\Controller\jobController::delete

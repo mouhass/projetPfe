@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container mt-4">
+        <h1>modifier un job cron</h1>
+        {{ form_start(jobForm) }}
+        <div class="row">
+            <div class="col-md-4">{{ form_row(jobForm.name) }}</div>
+            <div class="col-md-4">{{ form_row(jobForm.state) }}</div>
+            <div class="col-md-4">{{ form_row(jobForm.command) }}</div>
+        </div>
+{#        <div class="row">#}
+{#            <div class="col-md-4">{{ form_row(propertyForm.rooms) }}</div>#}
+{#            <div class="col-md-4">{{ form_row(propertyForm.bedrooms) }}</div>#}
+{#            <div class="col-md-4">{{ form_row(propertyForm.floor) }}</div>#}
+{#        </div>#}
+
+
+        {{ form_widget(jobForm) }}
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {{ form_end(jobForm) }}
+    </div>
+    </div>
+    </div>
+{% endblock %}
